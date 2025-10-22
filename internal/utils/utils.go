@@ -10,3 +10,12 @@ package utils
 func Zero[T any]() (x T) {
 	return x
 }
+
+// Same checks if two values of comparable type T are same using direct comparison
+// Requires T to be comparable to allow == check
+//
+// Same 使用直接比较检查可比较类型 T 的两个值是否相同
+// 需要 T 可比较以允许使用 == 检查
+func Same[T comparable](a, b T) bool {
+	return a == b
+}
